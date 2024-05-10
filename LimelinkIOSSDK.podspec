@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 TODO: We use limelink service for analytics and page navigation. We currently provide deep linking services and plan to offer more services in the future.
                        DESC
 
-  s.homepage         = 'https://limelink.com'
+  s.homepage         = 'https://limelink.org'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'hellovelope' => 'hellovelope@gmail.com' }
