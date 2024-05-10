@@ -68,7 +68,7 @@
 		D3F051426178C319C49DCC6469513ED2 /* Pods-LimelinkIOSSDK_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LimelinkIOSSDK_Tests-umbrella.h"; sourceTree = "<group>"; };
 		D9CE87BDA95AA740E6107C4B0267C509 /* Pods-LimelinkIOSSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LimelinkIOSSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		DF6E689842ED76EEF288F64EC1ED2E52 /* Pods-LimelinkIOSSDK_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-LimelinkIOSSDK_Example"; path = Pods_LimelinkIOSSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EDA8B88FF6E0A80A8048F508F28918AF /* LimelinkIOSSDK */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LimelinkIOSSDK; path = LimelinkIOSSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDA8B88FF6E0A80A8048F508F28918AF /* LimelinkIOSSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LimelinkIOSSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F86C1A46F42B113E3BF1C28D52E8A645 /* LimelinkIOSSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LimelinkIOSSDK.modulemap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,7 +134,7 @@
 		6DFCD24F46035CE3C2646528B7635B1D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EDA8B88FF6E0A80A8048F508F28918AF /* LimelinkIOSSDK */,
+				EDA8B88FF6E0A80A8048F508F28918AF /* LimelinkIOSSDK.framework */,
 				DF6E689842ED76EEF288F64EC1ED2E52 /* Pods-LimelinkIOSSDK_Example */,
 				618DECF6CEFC162B9EA35CF81689A19B /* Pods-LimelinkIOSSDK_Tests */,
 			);
@@ -268,7 +268,7 @@
 			);
 			name = LimelinkIOSSDK;
 			productName = LimelinkIOSSDK;
-			productReference = EDA8B88FF6E0A80A8048F508F28918AF /* LimelinkIOSSDK */;
+			productReference = EDA8B88FF6E0A80A8048F508F28918AF /* LimelinkIOSSDK.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		651829D2ECE77BFB8078E4171A96153E /* Pods-LimelinkIOSSDK_Tests */ = {
@@ -557,7 +557,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -688,7 +688,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
