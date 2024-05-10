@@ -31,6 +31,7 @@ TODO: We use limelink service for analytics and page navigation. We currently pr
   s.ios.deployment_target = '12.0'
 
   s.source_files = 'LimelinkIOSSDK/Classes/**/*'
+  s.swift_version = '5.0'
   
   # s.resource_bundles = {
   #   'LimelinkIOSSDK' => ['LimelinkIOSSDK/Assets/*.png']
