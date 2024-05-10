@@ -1,0 +1,16 @@
+PODS:
+  - LimelinkIOSSDK (0.1.0)
+
+DEPENDENCIES:
+  - LimelinkIOSSDK (from `../`)
+
+EXTERNAL SOURCES:
+  LimelinkIOSSDK:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LimelinkIOSSDK: 98573f1668f3e8fe013eb8da8696e179e006b4cb
+
+PODFILE CHECKSUM: c96bea97c88fe086355acdabc7375f6530dcda75
+
+COCOAPODS: 1.15.2

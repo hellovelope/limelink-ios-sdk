@@ -1,0 +1,6 @@
+framework module LimelinkIOSSDK {
+  umbrella header "LimelinkIOSSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "LimelinkIOSSDK",
+  "version": "0.1.0",
+  "summary": "A short description of LimelinkIOSSDK.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/hysong@artue.io/LimelinkIOSSDK",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "hysong@artue.io": "hysong@artue.io"
+  },
+  "source": {
+    "git": "https://github.com/hysong@artue.io/LimelinkIOSSDK.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "LimelinkIOSSDK/Classes/**/*"
+}

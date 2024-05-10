@@ -28,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1F475874D51A852171AE1498 /* LimelinkIOSSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = LimelinkIOSSDK.podspec; path = ../LimelinkIOSSDK.podspec; sourceTree = "<group>"; };
+		1F475874D51A852171AE1498 /* LimelinkIOSSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LimelinkIOSSDK.podspec; path = ../LimelinkIOSSDK.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		607FACD01AFB9204008FA782 /* LimelinkIOSSDK_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LimelinkIOSSDK_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,9 +41,9 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		7892F0856368C8B0A9729F3B /* Pods-LimelinkIOSSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LimelinkIOSSDK_Tests.debug.xcconfig"; path = "Target Support Files/Pods-LimelinkIOSSDK_Tests/Pods-LimelinkIOSSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		7D8C4545EC69953A8719C4D4 /* Pods-LimelinkIOSSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LimelinkIOSSDK_Tests.release.xcconfig"; path = "Target Support Files/Pods-LimelinkIOSSDK_Tests/Pods-LimelinkIOSSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		B197B4E0380D70B23AC1EE69 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		B197B4E0380D70B23AC1EE69 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		B63C4D92B80D844508FFC314 /* Pods-LimelinkIOSSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LimelinkIOSSDK_Example.debug.xcconfig"; path = "Target Support Files/Pods-LimelinkIOSSDK_Example/Pods-LimelinkIOSSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		C61B6F9830570CF061C4E18D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		C61B6F9830570CF061C4E18D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		CADB810869405321432EAF40 /* Pods_LimelinkIOSSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LimelinkIOSSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5D057E39AB3F4EFACFDEA5A /* Pods-LimelinkIOSSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LimelinkIOSSDK_Example.release.xcconfig"; path = "Target Support Files/Pods-LimelinkIOSSDK_Example/Pods-LimelinkIOSSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
 		E9E8FAAD1824217064702AC1 /* Pods_LimelinkIOSSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LimelinkIOSSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,7 +77,6 @@
 				7892F0856368C8B0A9729F3B /* Pods-LimelinkIOSSDK_Tests.debug.xcconfig */,
 				7D8C4545EC69953A8719C4D4 /* Pods-LimelinkIOSSDK_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +226,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);

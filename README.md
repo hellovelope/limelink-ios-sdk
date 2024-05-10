@@ -22,7 +22,7 @@ pod 'LimelinkIOSSDK'
 
 ## Author
 
-hysong@artue.io, hysong@artue.io
+hellovelope@gmail.com
 
 ## License
 
