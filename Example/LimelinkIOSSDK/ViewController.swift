@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  LimelinkIOSSDK
 //
-//  Created by hysong@artue.io on 05/10/2024.
-//  Copyright (c) 2024 hysong@artue.io. All rights reserved.
+//  Created by hellovelope@gmail.com on 05/10/2024.
+//  Copyright (c) 2024 hellovelope@gmail.com. All rights reserved.
 //
 
 import UIKit

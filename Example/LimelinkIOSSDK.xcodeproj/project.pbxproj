@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		241652422C21228300CB33A1 /* EventType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241652412C21228300CB33A1 /* EventType.swift */; };
+		241652452C21255900CB33A1 /* LimeLinkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241652442C21255900CB33A1 /* LimeLinkRequest.swift */; };
+		241652482C2125F200CB33A1 /* PathParamResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241652472C2125F200CB33A1 /* PathParamResponse.swift */; };
+		2416524B2C2137B500CB33A1 /* ApiSerivce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2416524A2C2137B500CB33A1 /* ApiSerivce.swift */; };
+		2416524D2C2157E600CB33A1 /* ApiServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2416524C2C2157E600CB33A1 /* ApiServiceImpl.swift */; };
+		2416524F2C21594100CB33A1 /* RetrofitClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2416524E2C21594100CB33A1 /* RetrofitClient.swift */; };
+		241652512C21642E00CB33A1 /* UrlHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241652502C21642E00CB33A1 /* UrlHandler.swift */; };
+		241652542C21656300CB33A1 /* LinkStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241652532C21656300CB33A1 /* LinkStats.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -29,6 +37,14 @@
 
 /* Begin PBXFileReference section */
 		1F475874D51A852171AE1498 /* LimelinkIOSSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LimelinkIOSSDK.podspec; path = ../LimelinkIOSSDK.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		241652412C21228300CB33A1 /* EventType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventType.swift; sourceTree = "<group>"; };
+		241652442C21255900CB33A1 /* LimeLinkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimeLinkRequest.swift; sourceTree = "<group>"; };
+		241652472C2125F200CB33A1 /* PathParamResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathParamResponse.swift; sourceTree = "<group>"; };
+		2416524A2C2137B500CB33A1 /* ApiSerivce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiSerivce.swift; sourceTree = "<group>"; };
+		2416524C2C2157E600CB33A1 /* ApiServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceImpl.swift; sourceTree = "<group>"; };
+		2416524E2C21594100CB33A1 /* RetrofitClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrofitClient.swift; sourceTree = "<group>"; };
+		241652502C21642E00CB33A1 /* UrlHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlHandler.swift; sourceTree = "<group>"; };
+		241652532C21656300CB33A1 /* LinkStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkStats.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* LimelinkIOSSDK_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LimelinkIOSSDK_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +105,40 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		241652402C21226100CB33A1 /* enum */ = {
+			isa = PBXGroup;
+			children = (
+				241652412C21228300CB33A1 /* EventType.swift */,
+			);
+			name = enum;
+			sourceTree = "<group>";
+		};
+		241652432C21254600CB33A1 /* request */ = {
+			isa = PBXGroup;
+			children = (
+				241652442C21255900CB33A1 /* LimeLinkRequest.swift */,
+			);
+			name = request;
+			sourceTree = "<group>";
+		};
+		241652462C2125DE00CB33A1 /* response */ = {
+			isa = PBXGroup;
+			children = (
+				241652472C2125F200CB33A1 /* PathParamResponse.swift */,
+			);
+			name = response;
+			sourceTree = "<group>";
+		};
+		241652492C2136B800CB33A1 /* service */ = {
+			isa = PBXGroup;
+			children = (
+				2416524A2C2137B500CB33A1 /* ApiSerivce.swift */,
+				2416524C2C2157E600CB33A1 /* ApiServiceImpl.swift */,
+				2416524E2C21594100CB33A1 /* RetrofitClient.swift */,
+			);
+			name = service;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -113,12 +163,18 @@
 		607FACD21AFB9204008FA782 /* Example for LimelinkIOSSDK */ = {
 			isa = PBXGroup;
 			children = (
+				241652492C2136B800CB33A1 /* service */,
+				241652462C2125DE00CB33A1 /* response */,
+				241652432C21254600CB33A1 /* request */,
+				241652402C21226100CB33A1 /* enum */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				241652502C21642E00CB33A1 /* UrlHandler.swift */,
+				241652532C21656300CB33A1 /* LinkStats.swift */,
 			);
 			name = "Example for LimelinkIOSSDK";
 			path = LimelinkIOSSDK;
@@ -332,7 +388,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				241652422C21228300CB33A1 /* EventType.swift in Sources */,
+				2416524D2C2157E600CB33A1 /* ApiServiceImpl.swift in Sources */,
+				241652512C21642E00CB33A1 /* UrlHandler.swift in Sources */,
+				241652452C21255900CB33A1 /* LimeLinkRequest.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				2416524F2C21594100CB33A1 /* RetrofitClient.swift in Sources */,
+				2416524B2C2137B500CB33A1 /* ApiSerivce.swift in Sources */,
+				241652482C2125F200CB33A1 /* PathParamResponse.swift in Sources */,
+				241652542C21656300CB33A1 /* LinkStats.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
