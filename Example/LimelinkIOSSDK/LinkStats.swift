@@ -9,11 +9,11 @@
 import Foundation
 
 
-class LinkStats {
+public class LinkStats {
     private static let prefsName = "link_first_launch_prefs"
     private static let keyFirstLaunch = "is_first_launch"
 
-    static func isFirstLaunch() -> Bool {
+    public static func isFirstLaunch() -> Bool {
         let userDefaults = UserDefaults.standard
         let isFirstLaunch = userDefaults.bool(forKey: keyFirstLaunch)
         if isFirstLaunch {

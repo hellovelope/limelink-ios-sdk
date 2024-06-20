@@ -8,7 +8,7 @@
 
 import Foundation
 
-class UrlHandler {
+public class UrlHandler {
     private static let mainUrlKey = "original-url"
 
     /* 기본 URL 추출 */
