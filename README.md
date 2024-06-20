@@ -1,6 +1,6 @@
 # LimelinkIOSSDK
 
-[![CI Status](https://img.shields.io/travis/hysong@artue.io/LimelinkIOSSDK.svg?style=flat)](https://travis-ci.org/hysong@artue.io/LimelinkIOSSDK)
+
 [![Version](https://img.shields.io/cocoapods/v/LimelinkIOSSDK.svg?style=flat)](https://cocoapods.org/pods/LimelinkIOSSDK)
 [![License](https://img.shields.io/cocoapods/l/LimelinkIOSSDK.svg?style=flat)](https://cocoapods.org/pods/LimelinkIOSSDK)
 [![Platform](https://img.shields.io/cocoapods/p/LimelinkIOSSDK.svg?style=flat)](https://cocoapods.org/pods/LimelinkIOSSDK)
