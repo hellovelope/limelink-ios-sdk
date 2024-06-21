@@ -123,14 +123,6 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		24F2F1682C255D8200912691 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				37FA72653FFCCC51DF5C99414FCF24BE /* LimelinkIOSSDK.swift */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,7 +170,7 @@
 		A5B0350F0B51DAC6609F016578B494D6 /* LimelinkIOSSDK */ = {
 			isa = PBXGroup;
 			children = (
-				24F2F1682C255D8200912691 /* Classes */,
+				37FA72653FFCCC51DF5C99414FCF24BE /* LimelinkIOSSDK.swift */,
 				AC4EE15674AC468D085360C1D5F2115D /* Pod */,
 				05E62BD66F90C7553C01211C51EFCCDC /* Support Files */,
 			);
