@@ -15,6 +15,10 @@ public class LimelinkIOSSDK {
         let components = URLComponents(url: url, resolvingAgainstBaseURL: false)
         return components?.queryItems?.first(where: { $0.name == mainUrlKey })?.value
     }
+    
+    public static func test(with name: String) {
+        print("\(name)님 안녕하세요.")
+    }
 }
 
 

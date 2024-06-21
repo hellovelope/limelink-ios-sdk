@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LimelinkIOSSDK'
-  s.version          = '0.1.12'
+  s.version          = '0.1.13'
   s.summary          = 'We use limelink service for analytics and page navigation..'
 
 # This description is used to generate tags and improve search results.
@@ -30,7 +30,7 @@ TODO: We use limelink service for analytics and page navigation. We currently pr
 
   s.ios.deployment_target = '12.0'
 
-  s.source_files = 'Classes/**/*'
+  s.source_files = 'LimelinkIOSSDK/Classes/**/*'
   s.swift_version = '5.0'
   
   # s.resource_bundles = {
