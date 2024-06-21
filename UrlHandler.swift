@@ -16,7 +16,7 @@ public class UrlHandler {
     }
 
     /* Scheme에서 original URL 추출 */
-    static func getScheme(from url: URL?) -> String? {
+    public static func getScheme(from url: URL?) -> String? {
         guard let url = url else { return nil }
         let components = URLComponents(url: url, resolvingAgainstBaseURL: false)
         return components?.queryItems?.first(where: { $0.name == mainUrlKey })?.value

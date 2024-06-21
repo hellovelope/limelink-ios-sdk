@@ -7,10 +7,15 @@
 //
 
 import UIKit
+import LimelinkIOSSDK
 
 public class ViewController: UIViewController {
 
     public override func viewDidLoad() {
+        
+        var url = URL(string: "test")
+        var scheme = UrlHandler.getScheme(from: url)
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
