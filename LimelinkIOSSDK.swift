@@ -19,7 +19,7 @@ public class LimelinkIOSSDK {
 
 
 public func parseQueryParams(from url: URL?) -> [String: String] {
-    guard let urlString = getScheme(from: url), let url = URL(string: urlString) else {
+    guard let urlString = LimelinkIOSSDK.getScheme(from: url), let url = URL(string: urlString) else {
         return [:]
     }
 
@@ -31,7 +31,7 @@ public func parseQueryParams(from url: URL?) -> [String: String] {
 }
 
 public func parsePathParams(from url: URL?) -> PathParamResponse {
-    guard let urlString = getScheme(from: url), let url = URL(string: urlString) else {
+    guard let urlString = LimelinkIOSSDK.getScheme(from: url), let url = URL(string: urlString) else {
         return PathParamResponse(mainPath: "", subPath: "")
     }
 
