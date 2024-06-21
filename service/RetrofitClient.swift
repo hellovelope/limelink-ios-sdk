@@ -1,9 +1,8 @@
 //
 //  RetrofitClient.swift
-//  LimelinkIOSSDK_Example
+//  LimelinkIOSSDK
 //
-//  Created by artue on 6/18/24.
-//  Copyright © 2024 CocoaPods. All rights reserved.
+//  Created by artue on 6/21/24.
 //
 
 import Foundation
