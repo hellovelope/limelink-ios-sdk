@@ -8,12 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		14A8AE0C4B79C68CB681F66D0CCCB6C2 /* LimelinkIOSSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B6021329F9500925452F3D0D59263B50 /* LimelinkIOSSDK-dummy.m */; };
-		24F2F1172C25241900912691 /* EventType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F2F1162C25241900912691 /* EventType.swift */; };
-		24F2F11A2C25243F00912691 /* LimeLinkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F2F1192C25243F00912691 /* LimeLinkRequest.swift */; };
-		24F2F11D2C25245800912691 /* PathParamResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F2F11C2C25245800912691 /* PathParamResponse.swift */; };
-		24F2F1202C25247600912691 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F2F11F2C25247600912691 /* ApiService.swift */; };
-		24F2F1222C25248800912691 /* ApiServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F2F1212C25248800912691 /* ApiServiceImpl.swift */; };
-		24F2F1242C2524A600912691 /* RetrofitClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F2F1232C2524A600912691 /* RetrofitClient.swift */; };
 		3D9A973B262F7D8C8D2D65658D6F440C /* Pods-LimelinkIOSSDK_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DC19A6826ABC0A0EA47D163EAF6507 /* Pods-LimelinkIOSSDK_Example-dummy.m */; };
 		542B8AE8AF17A453495AD105A0BCEF2B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		768B6B6354B5C8C500C37AA225D20C15 /* LimelinkIOSSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FA72653FFCCC51DF5C99414FCF24BE /* LimelinkIOSSDK.swift */; };
@@ -51,13 +45,7 @@
 		15B89FC3872FC5D3F03C47C2DB11BE11 /* Pods-LimelinkIOSSDK_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LimelinkIOSSDK_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		1AADFB8144932F8CE761C08E784990AB /* LimelinkIOSSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LimelinkIOSSDK-prefix.pch"; sourceTree = "<group>"; };
 		21C0900E16657641C26B948A9A7E124C /* Pods-LimelinkIOSSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LimelinkIOSSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		24F2F1162C25241900912691 /* EventType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventType.swift; sourceTree = "<group>"; };
-		24F2F1192C25243F00912691 /* LimeLinkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimeLinkRequest.swift; sourceTree = "<group>"; };
-		24F2F11C2C25245800912691 /* PathParamResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathParamResponse.swift; sourceTree = "<group>"; };
-		24F2F11F2C25247600912691 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
-		24F2F1212C25248800912691 /* ApiServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceImpl.swift; sourceTree = "<group>"; };
-		24F2F1232C2524A600912691 /* RetrofitClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrofitClient.swift; sourceTree = "<group>"; };
-		37FA72653FFCCC51DF5C99414FCF24BE /* LimelinkIOSSDK.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LimelinkIOSSDK.swift; path = LimelinkIOSSDK/Classes/LimelinkIOSSDK.swift; sourceTree = "<group>"; };
+		37FA72653FFCCC51DF5C99414FCF24BE /* LimelinkIOSSDK.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LimelinkIOSSDK.swift; sourceTree = "<group>"; };
 		3BE36B86F6509D106AB04654D9832C0C /* Pods-LimelinkIOSSDK_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LimelinkIOSSDK_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		4D0BFB92D2529B0FA1DA9A462F48FA9A /* LimelinkIOSSDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LimelinkIOSSDK-Info.plist"; sourceTree = "<group>"; };
 		5AB3B4832EEA0F338E0684FCB359DBF4 /* Pods-LimelinkIOSSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LimelinkIOSSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -135,40 +123,6 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		24F2F1152C25240200912691 /* enum */ = {
-			isa = PBXGroup;
-			children = (
-				24F2F1162C25241900912691 /* EventType.swift */,
-			);
-			path = enum;
-			sourceTree = "<group>";
-		};
-		24F2F1182C25243000912691 /* request */ = {
-			isa = PBXGroup;
-			children = (
-				24F2F1192C25243F00912691 /* LimeLinkRequest.swift */,
-			);
-			path = request;
-			sourceTree = "<group>";
-		};
-		24F2F11B2C25244C00912691 /* response */ = {
-			isa = PBXGroup;
-			children = (
-				24F2F11C2C25245800912691 /* PathParamResponse.swift */,
-			);
-			path = response;
-			sourceTree = "<group>";
-		};
-		24F2F11E2C25246200912691 /* service */ = {
-			isa = PBXGroup;
-			children = (
-				24F2F11F2C25247600912691 /* ApiService.swift */,
-				24F2F1212C25248800912691 /* ApiServiceImpl.swift */,
-				24F2F1232C2524A600912691 /* RetrofitClient.swift */,
-			);
-			path = service;
-			sourceTree = "<group>";
-		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,10 +170,6 @@
 		A5B0350F0B51DAC6609F016578B494D6 /* LimelinkIOSSDK */ = {
 			isa = PBXGroup;
 			children = (
-				24F2F11E2C25246200912691 /* service */,
-				24F2F11B2C25244C00912691 /* response */,
-				24F2F1182C25243000912691 /* request */,
-				24F2F1152C25240200912691 /* enum */,
 				37FA72653FFCCC51DF5C99414FCF24BE /* LimelinkIOSSDK.swift */,
 				AC4EE15674AC468D085360C1D5F2115D /* Pod */,
 				05E62BD66F90C7553C01211C51EFCCDC /* Support Files */,
@@ -419,13 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14A8AE0C4B79C68CB681F66D0CCCB6C2 /* LimelinkIOSSDK-dummy.m in Sources */,
-				24F2F1172C25241900912691 /* EventType.swift in Sources */,
-				24F2F1222C25248800912691 /* ApiServiceImpl.swift in Sources */,
-				24F2F1202C25247600912691 /* ApiService.swift in Sources */,
-				24F2F11A2C25243F00912691 /* LimeLinkRequest.swift in Sources */,
-				24F2F1242C2524A600912691 /* RetrofitClient.swift in Sources */,
 				768B6B6354B5C8C500C37AA225D20C15 /* LimelinkIOSSDK.swift in Sources */,
-				24F2F11D2C25245800912691 /* PathParamResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
