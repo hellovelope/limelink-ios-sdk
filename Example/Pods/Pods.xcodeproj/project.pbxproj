@@ -11,8 +11,6 @@
 		24F2F16B2C29170600912691 /* EventType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F2F16A2C29170600912691 /* EventType.swift */; };
 		24F2F16E2C29175100912691 /* LimeLinkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F2F16D2C29175100912691 /* LimeLinkRequest.swift */; };
 		24F2F1712C29176E00912691 /* PathParamResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F2F1702C29176E00912691 /* PathParamResponse.swift */; };
-		24F2F1742C29178B00912691 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F2F1732C29178B00912691 /* ApiService.swift */; };
-		24F2F1762C2917A900912691 /* ApiServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F2F1752C2917A900912691 /* ApiServiceImpl.swift */; };
 		24F2F17A2C2917EE00912691 /* LinkStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F2F1792C2917EE00912691 /* LinkStats.swift */; };
 		24F2F17C2C29181700912691 /* UrlHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F2F17B2C29181700912691 /* UrlHandler.swift */; };
 		3D9A973B262F7D8C8D2D65658D6F440C /* Pods-LimelinkIOSSDK_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DC19A6826ABC0A0EA47D163EAF6507 /* Pods-LimelinkIOSSDK_Example-dummy.m */; };
@@ -54,8 +52,6 @@
 		24F2F16A2C29170600912691 /* EventType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventType.swift; sourceTree = "<group>"; };
 		24F2F16D2C29175100912691 /* LimeLinkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimeLinkRequest.swift; sourceTree = "<group>"; };
 		24F2F1702C29176E00912691 /* PathParamResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathParamResponse.swift; sourceTree = "<group>"; };
-		24F2F1732C29178B00912691 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
-		24F2F1752C2917A900912691 /* ApiServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceImpl.swift; sourceTree = "<group>"; };
 		24F2F1792C2917EE00912691 /* LinkStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkStats.swift; sourceTree = "<group>"; };
 		24F2F17B2C29181700912691 /* UrlHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlHandler.swift; sourceTree = "<group>"; };
 		3BE36B86F6509D106AB04654D9832C0C /* Pods-LimelinkIOSSDK_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LimelinkIOSSDK_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -159,15 +155,6 @@
 			path = response;
 			sourceTree = "<group>";
 		};
-		24F2F1722C29177C00912691 /* service */ = {
-			isa = PBXGroup;
-			children = (
-				24F2F1732C29178B00912691 /* ApiService.swift */,
-				24F2F1752C2917A900912691 /* ApiServiceImpl.swift */,
-			);
-			path = service;
-			sourceTree = "<group>";
-		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,7 +202,6 @@
 		A5B0350F0B51DAC6609F016578B494D6 /* LimelinkIOSSDK */ = {
 			isa = PBXGroup;
 			children = (
-				24F2F1722C29177C00912691 /* service */,
 				24F2F16F2C29176400912691 /* response */,
 				24F2F16C2C29174200912691 /* request */,
 				24F2F1692C2916B600912691 /* enum */,
@@ -420,9 +406,7 @@
 			files = (
 				14A8AE0C4B79C68CB681F66D0CCCB6C2 /* LimelinkIOSSDK-dummy.m in Sources */,
 				24F2F16B2C29170600912691 /* EventType.swift in Sources */,
-				24F2F1762C2917A900912691 /* ApiServiceImpl.swift in Sources */,
 				24F2F17C2C29181700912691 /* UrlHandler.swift in Sources */,
-				24F2F1742C29178B00912691 /* ApiService.swift in Sources */,
 				24F2F16E2C29175100912691 /* LimeLinkRequest.swift in Sources */,
 				24F2F1712C29176E00912691 /* PathParamResponse.swift in Sources */,
 				24F2F17A2C2917EE00912691 /* LinkStats.swift in Sources */,
