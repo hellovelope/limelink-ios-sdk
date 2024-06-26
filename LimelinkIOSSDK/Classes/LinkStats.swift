@@ -32,7 +32,7 @@ public class LinkStats {
     }
 }
 
-func createLimeLinkRequest(privateKey: String, pathParamResponse: PathParamResponse, eventType: EventType) -> LimeLinkRequest {
+private func createLimeLinkRequest(privateKey: String, pathParamResponse: PathParamResponse, eventType: EventType) -> LimeLinkRequest {
     return LimeLinkRequest(
         privateKey: privateKey,
         suffix: pathParamResponse.mainPath,
@@ -41,7 +41,7 @@ func createLimeLinkRequest(privateKey: String, pathParamResponse: PathParamRespo
     )
 }
 
-func saveLimeLinkStatus(url: URL?, privateKey: String, apiService: ApiSerivce) {
+public func saveLimeLinkStatus(url: URL?, privateKey: String) {
     let pathParamResponse = parsePathParams(from: url)
 
     if pathParamResponse.mainPath.isEmpty {
@@ -51,7 +51,7 @@ func saveLimeLinkStatus(url: URL?, privateKey: String, apiService: ApiSerivce) {
     let eventType: EventType = LinkStats.isFirstLaunch() ? EventType.FIRST_RUN : EventType.RERUN
     let limeLinkRequest = createLimeLinkRequest(privateKey: privateKey, pathParamResponse: pathParamResponse, eventType: eventType)
 
-    apiService.sendLimeLink(data: limeLinkRequest) { result in
+    sendLimeLink(data: limeLinkRequest) { result in
         switch result {
         case .success:
             print("Request was successful")
@@ -60,3 +60,35 @@ func saveLimeLinkStatus(url: URL?, privateKey: String, apiService: ApiSerivce) {
         }
     }
 }
+
+private func sendLimeLink(data: LimeLinkRequest, completion: @escaping (Result<Void, Error>) -> Void) {
+        let baseURL = URL(string: "https://limelink.org")!
+        let url = baseURL.appendingPathComponent("/api/v1/stats/event")
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        do {
+            let jsonData = try JSONEncoder().encode(data) // JSONEncoder 인스턴스를 생성
+            request.httpBody = jsonData
+        } catch {
+            completion(.failure(error))
+            return
+        }
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            if let error = error {
+                completion(.failure(error))
+                return
+            }
+            
+            guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+                completion(.failure(NSError(domain: "Invalid response", code: 0, userInfo: nil)))
+                return
+            }
+            
+            completion(.success(()))
+        }
+        
+        task.resume()
+    }
