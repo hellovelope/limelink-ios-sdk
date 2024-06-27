@@ -8,17 +8,17 @@
 import Foundation
 
 public class LimeLinkRequest: Codable {
-    var privateKey: String
+    var private_key: String
     var suffix: String
     var handle: String?
-    var eventType: String
-    var operatingSystem: String
+    var event_type: String
+    var operating_system: String
 
-    init(privateKey: String, suffix: String, handle: String? = nil, eventType: String, operatingSystem: String = "android") {
-        self.privateKey = privateKey
+    init(private_key: String, suffix: String, handle: String? = nil, event_type: String, operating_system: String = "ios") {
+        self.private_key = private_key
         self.suffix = suffix
         self.handle = handle
-        self.eventType = eventType
-        self.operatingSystem = operatingSystem
+        self.event_type = event_type
+        self.operating_system = operating_system
     }
 }

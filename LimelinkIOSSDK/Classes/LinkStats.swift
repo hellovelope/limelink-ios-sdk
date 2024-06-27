@@ -34,10 +34,10 @@ public class LinkStats {
 
 private func createLimeLinkRequest(privateKey: String, pathParamResponse: PathParamResponse, eventType: EventType) -> LimeLinkRequest {
     return LimeLinkRequest(
-        privateKey: privateKey,
+        private_key: privateKey,
         suffix: pathParamResponse.mainPath,
         handle: pathParamResponse.subPath,
-        eventType: eventType.rawValue
+        event_type: eventType.rawValue
     )
 }
 
