@@ -9,5 +9,5 @@ import Foundation
 
 enum EventType: String {
     case FIRST_RUN = "first_run"
-    case RERUN = "rerurn"
+    case RERUN = "rerun"
 }
