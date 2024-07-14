@@ -16,9 +16,4 @@ public class PathParamResponse {
         self.subPath = subPath
     }
     
-    public String getMainPath() {
-        return mainPath
-    }
-    
-    public String get
 }

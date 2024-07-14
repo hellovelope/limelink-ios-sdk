@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LimelinkIOSSDK'
-  s.version          = '0.1.22'
+  s.version          = '0.1.23'
   s.summary          = 'We use limelink service for analytics and page navigation..'
 
 # This description is used to generate tags and improve search results.
