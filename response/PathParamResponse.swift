@@ -8,11 +8,17 @@
 import Foundation
 
 public class PathParamResponse {
-    var mainPath: String
-    var subPath: String?
+    public var mainPath: String
+    public var subPath: String?
     
     init(mainPath: String, subPath: String? = nil) {
         self.mainPath = mainPath
         self.subPath = subPath
     }
+    
+    public String getMainPath() {
+        return mainPath
+    }
+    
+    public String get
 }
