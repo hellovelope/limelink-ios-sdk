@@ -37,7 +37,6 @@ public func parsePathParams(from url: URL?) -> PathParamResponse {
     guard let url = url else {
            return PathParamResponse(mainPath: "", subPath: "")
        }
-    let urlString = url.scheme
     let pathSegments = url.pathComponents.filter { $0 != "/" }
     let mainPath = pathSegments.indices.contains(0) ? pathSegments[0] : ""
     let subPath = pathSegments.indices.contains(2) ? pathSegments[2] : nil
