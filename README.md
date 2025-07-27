@@ -67,3 +67,57 @@ class ViewController: UIViewController {
 
 
 - This way, you can handle the information superficially and navigate to the desired screen based on the handle value.
+
+## Universal Link Support
+
+### Setup Instructions
+
+1. **Info.plist Configuration**
+   - Add `applinks:limelink.org` to `com.apple.developer.associated-domains`
+   - Register `limelink` scheme in `CFBundleURLTypes`
+
+2. **AppDelegate Configuration**
+   ```swift
+   // Universal Link handling
+   func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+       if userActivity.activityType == NSUserActivityTypeBrowsingWeb {
+           if let url = userActivity.webpageURL {
+               LimelinkSDK.shared.handleUniversalLink(url)
+               return true
+           }
+       }
+       return false
+   }
+   ```
+
+### Usage
+
+#### 1. Subdomain Method (Recommended)
+When accessing `https://{suffix}.limelink.org`:
+
+1. SDK retrieves header information from the subdomain
+2. Makes a request to `https://limelink.org/universal-link/app/dynamic_link/{suffix}` API with header information
+3. Redirects to the appropriate screen within the app using the `request_uri` received from the API
+
+#### 2. Direct Access Method
+When directly accessing `https://limelink.org/universal-link/app/dynamic_link/{suffix}`:
+
+1. SDK makes a direct API request
+2. Redirects to the appropriate screen within the app using the `request_uri`
+
+### Examples
+
+```swift
+// Method 1: Subdomain Access
+// When accessing https://abc123.limelink.org
+// 1. Collect header information from subdomain
+// 2. Call https://limelink.org/universal-link/app/dynamic_link/abc123 API
+// 3. API response: {"request_uri": "https://example.com/some-page"}
+// 4. Redirect to appropriate screen
+
+// Method 2: Direct Access
+// When accessing https://limelink.org/universal-link/app/dynamic_link/abc123
+// 1. Make direct API call
+// 2. API response: {"request_uri": "product/detail/123"}
+// 3. Handle with limelink://product/detail/123 scheme
+```

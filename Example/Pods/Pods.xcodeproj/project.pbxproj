@@ -65,7 +65,8 @@
 		7F0832B027A9C5523BCBD5328528D500 /* LimelinkIOSSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LimelinkIOSSDK.debug.xcconfig; sourceTree = "<group>"; };
 		7FCB7C7C5C3853D2AD53B33162E0C4DD /* Pods-LimelinkIOSSDK_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LimelinkIOSSDK_Example.modulemap"; sourceTree = "<group>"; };
 		915C24BF19E85B998D8E886BC0B711A9 /* Pods-LimelinkIOSSDK_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LimelinkIOSSDK_Example-umbrella.h"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; };
+		A4E2AC8F2DF30ED7008AFCAC /* LimeLinkSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimeLinkSDK.swift; sourceTree = "<group>"; };
 		ACF980FC17E55D33A50CEF89999D6B24 /* LimelinkIOSSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LimelinkIOSSDK-umbrella.h"; sourceTree = "<group>"; };
 		B5B7439C5367FF26CB84145807907C08 /* LimelinkIOSSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LimelinkIOSSDK.release.xcconfig; sourceTree = "<group>"; };
 		B6021329F9500925452F3D0D59263B50 /* LimelinkIOSSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LimelinkIOSSDK-dummy.m"; sourceTree = "<group>"; };
@@ -199,9 +200,18 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		A4E2AC8E2DF30EA1008AFCAC /* deeplink */ = {
+			isa = PBXGroup;
+			children = (
+				A4E2AC8F2DF30ED7008AFCAC /* LimeLinkSDK.swift */,
+			);
+			path = deeplink;
+			sourceTree = "<group>";
+		};
 		A5B0350F0B51DAC6609F016578B494D6 /* LimelinkIOSSDK */ = {
 			isa = PBXGroup;
 			children = (
+				A4E2AC8E2DF30EA1008AFCAC /* deeplink */,
 				24F2F16F2C29176400912691 /* response */,
 				24F2F16C2C29174200912691 /* request */,
 				24F2F1692C2916B600912691 /* enum */,

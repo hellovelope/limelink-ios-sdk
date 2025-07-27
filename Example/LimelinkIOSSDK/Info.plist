@@ -35,5 +35,20 @@
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 	</array>
+	<key>com.apple.developer.associated-domains</key>
+	<array>
+		<string>applinks:limelink.org</string>
+	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.artue.limelink.ios.sdk</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>limelink</string>
+			</array>
+		</dict>
+	</array>
 </dict>
 </plist>

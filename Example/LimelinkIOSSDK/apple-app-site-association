@@ -1,0 +1,14 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "TEAM_ID.com.artue.limelink.ios.sdk",
+        "paths": [
+          "/universal-link/app/dynamic_link/*",
+          "/*"
+        ]
+      }
+    ]
+  }
+} 

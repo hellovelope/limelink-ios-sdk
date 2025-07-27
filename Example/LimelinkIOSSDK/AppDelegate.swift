@@ -20,6 +20,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         return true
     }
+    
+    // MARK: - Universal Link 처리
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+        // Universal Link 처리
+        if userActivity.activityType == NSUserActivityTypeBrowsingWeb {
+            if let url = userActivity.webpageURL {
+                LimelinkSDK.shared.handleUniversalLink(url)
+                return true
+            }
+        }
+        return false
+    }
+    
+    // iOS 9 이하 버전 지원을 위한 메서드
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        LimelinkSDK.shared.handleUniversalLink(url)
+        return true
+    }
+    
+    // iOS 9+ 커스텀 URL 스킴 처리
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        LimelinkSDK.shared.handleUniversalLink(url)
+        return true
+    }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
