@@ -9,12 +9,12 @@ struct UniversalLinkResponse: Codable {
     let request_uri: String
 }
 
-class LimelinkSDK {
-    static let shared = LimelinkSDK()
+public class LimelinkSDK {
+    public static let shared = LimelinkSDK()
 
     private init() {}
 
-    func handleUniversalLink(_ url: URL) {
+    public func handleUniversalLink(_ url: URL) {
         guard let host = url.host else { return }
         
         // {suffix}.limelink.org 패턴 확인
