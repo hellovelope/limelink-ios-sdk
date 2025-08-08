@@ -82,7 +82,7 @@ class ViewController: UIViewController {
    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
        if userActivity.activityType == NSUserActivityTypeBrowsingWeb {
            if let url = userActivity.webpageURL {
-               LimelinkSDK.shared.handleUniversalLink(url)
+               UniversalLink.shared.handleUniversalLink(url)
                return true
            }
        }

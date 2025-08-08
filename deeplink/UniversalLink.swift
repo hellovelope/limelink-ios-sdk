@@ -9,8 +9,8 @@ struct UniversalLinkResponse: Codable {
     let request_uri: String
 }
 
-public class LimelinkSDK {
-    public static let shared = LimelinkSDK()
+public class UniversalLink {
+    public static let shared = UniversalLink()
 
     private init() {}
 
