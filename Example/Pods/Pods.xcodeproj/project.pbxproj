@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		14A8AE0C4B79C68CB681F66D0CCCB6C2 /* LimelinkIOSSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B6021329F9500925452F3D0D59263B50 /* LimelinkIOSSDK-dummy.m */; };
-		24F2F16B2C29170600912691 /* EventType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F2F16A2C29170600912691 /* EventType.swift */; };
-		24F2F16E2C29175100912691 /* LimeLinkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F2F16D2C29175100912691 /* LimeLinkRequest.swift */; };
-		24F2F1712C29176E00912691 /* PathParamResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F2F1702C29176E00912691 /* PathParamResponse.swift */; };
-		24F2F17A2C2917EE00912691 /* LinkStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F2F1792C2917EE00912691 /* LinkStats.swift */; };
-		24F2F17C2C29181700912691 /* UrlHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F2F17B2C29181700912691 /* UrlHandler.swift */; };
 		3D9A973B262F7D8C8D2D65658D6F440C /* Pods-LimelinkIOSSDK_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DC19A6826ABC0A0EA47D163EAF6507 /* Pods-LimelinkIOSSDK_Example-dummy.m */; };
+		527E67632E487D1E003D447D /* UniversalLinkHandlerBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 527E675E2E487D1E003D447D /* UniversalLinkHandlerBridge.h */; };
+		527E67642E487D1E003D447D /* UniversalLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E67542E487D1E003D447D /* UniversalLink.swift */; };
+		527E67652E487D1E003D447D /* LimelinkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E67612E487D1E003D447D /* LimelinkService.swift */; };
+		527E67662E487D1E003D447D /* UrlHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E67552E487D1E003D447D /* UrlHandler.swift */; };
+		527E67672E487D1E003D447D /* EventType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E67572E487D1E003D447D /* EventType.swift */; };
+		527E67682E487D1E003D447D /* PathParamResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E675B2E487D1E003D447D /* PathParamResponse.swift */; };
+		527E67692E487D1E003D447D /* UniversalLinkHandlerBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 527E675F2E487D1E003D447D /* UniversalLinkHandlerBridge.m */; };
+		527E676A2E487D1E003D447D /* LimeLinkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E67592E487D1E003D447D /* LimeLinkRequest.swift */; };
 		542B8AE8AF17A453495AD105A0BCEF2B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		8C3A0F580DC9D4B3434340E89FC7C4F7 /* Pods-LimelinkIOSSDK_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 915C24BF19E85B998D8E886BC0B711A9 /* Pods-LimelinkIOSSDK_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		97FE0CC810E2E08E0ADF5BA1AC65467B /* Pods-LimelinkIOSSDK_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 754C2F5C70EB3F148B0DBE94F51658BF /* Pods-LimelinkIOSSDK_Tests-dummy.m */; };
@@ -49,13 +52,16 @@
 		15B89FC3872FC5D3F03C47C2DB11BE11 /* Pods-LimelinkIOSSDK_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LimelinkIOSSDK_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		1AADFB8144932F8CE761C08E784990AB /* LimelinkIOSSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LimelinkIOSSDK-prefix.pch"; sourceTree = "<group>"; };
 		21C0900E16657641C26B948A9A7E124C /* Pods-LimelinkIOSSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LimelinkIOSSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		24F2F16A2C29170600912691 /* EventType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventType.swift; sourceTree = "<group>"; };
-		24F2F16D2C29175100912691 /* LimeLinkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimeLinkRequest.swift; sourceTree = "<group>"; };
-		24F2F1702C29176E00912691 /* PathParamResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathParamResponse.swift; sourceTree = "<group>"; };
-		24F2F1792C2917EE00912691 /* LinkStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkStats.swift; sourceTree = "<group>"; };
-		24F2F17B2C29181700912691 /* UrlHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlHandler.swift; sourceTree = "<group>"; };
 		3BE36B86F6509D106AB04654D9832C0C /* Pods-LimelinkIOSSDK_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LimelinkIOSSDK_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		4D0BFB92D2529B0FA1DA9A462F48FA9A /* LimelinkIOSSDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LimelinkIOSSDK-Info.plist"; sourceTree = "<group>"; };
+		527E67542E487D1E003D447D /* UniversalLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversalLink.swift; sourceTree = "<group>"; };
+		527E67552E487D1E003D447D /* UrlHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlHandler.swift; sourceTree = "<group>"; };
+		527E67572E487D1E003D447D /* EventType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventType.swift; sourceTree = "<group>"; };
+		527E67592E487D1E003D447D /* LimeLinkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimeLinkRequest.swift; sourceTree = "<group>"; };
+		527E675B2E487D1E003D447D /* PathParamResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathParamResponse.swift; sourceTree = "<group>"; };
+		527E675E2E487D1E003D447D /* UniversalLinkHandlerBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UniversalLinkHandlerBridge.h; sourceTree = "<group>"; };
+		527E675F2E487D1E003D447D /* UniversalLinkHandlerBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UniversalLinkHandlerBridge.m; sourceTree = "<group>"; };
+		527E67612E487D1E003D447D /* LimelinkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimelinkService.swift; sourceTree = "<group>"; };
 		5AB3B4832EEA0F338E0684FCB359DBF4 /* Pods-LimelinkIOSSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LimelinkIOSSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		618DECF6CEFC162B9EA35CF81689A19B /* Pods_LimelinkIOSSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LimelinkIOSSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BEB9600CD0296CB978C1371ECB4BB73 /* Pods-LimelinkIOSSDK_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LimelinkIOSSDK_Tests-Info.plist"; sourceTree = "<group>"; };
@@ -66,7 +72,6 @@
 		7FCB7C7C5C3853D2AD53B33162E0C4DD /* Pods-LimelinkIOSSDK_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LimelinkIOSSDK_Example.modulemap"; sourceTree = "<group>"; };
 		915C24BF19E85B998D8E886BC0B711A9 /* Pods-LimelinkIOSSDK_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LimelinkIOSSDK_Example-umbrella.h"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; };
-		A4E2AC8F2DF30ED7008AFCAC /* LimeLinkSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimeLinkSDK.swift; sourceTree = "<group>"; };
 		ACF980FC17E55D33A50CEF89999D6B24 /* LimelinkIOSSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LimelinkIOSSDK-umbrella.h"; sourceTree = "<group>"; };
 		B5B7439C5367FF26CB84145807907C08 /* LimelinkIOSSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LimelinkIOSSDK.release.xcconfig; sourceTree = "<group>"; };
 		B6021329F9500925452F3D0D59263B50 /* LimelinkIOSSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LimelinkIOSSDK-dummy.m"; sourceTree = "<group>"; };
@@ -132,28 +137,64 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		24F2F1692C2916B600912691 /* enum */ = {
+		527E67562E487D1E003D447D /* Handlers */ = {
 			isa = PBXGroup;
 			children = (
-				24F2F16A2C29170600912691 /* EventType.swift */,
+				527E67542E487D1E003D447D /* UniversalLink.swift */,
+				527E67552E487D1E003D447D /* UrlHandler.swift */,
 			);
-			path = enum;
+			path = Handlers;
 			sourceTree = "<group>";
 		};
-		24F2F16C2C29174200912691 /* request */ = {
+		527E67582E487D1E003D447D /* Enums */ = {
 			isa = PBXGroup;
 			children = (
-				24F2F16D2C29175100912691 /* LimeLinkRequest.swift */,
+				527E67572E487D1E003D447D /* EventType.swift */,
 			);
-			path = request;
+			path = Enums;
 			sourceTree = "<group>";
 		};
-		24F2F16F2C29176400912691 /* response */ = {
+		527E675A2E487D1E003D447D /* Request */ = {
 			isa = PBXGroup;
 			children = (
-				24F2F1702C29176E00912691 /* PathParamResponse.swift */,
+				527E67592E487D1E003D447D /* LimeLinkRequest.swift */,
 			);
-			path = response;
+			path = Request;
+			sourceTree = "<group>";
+		};
+		527E675C2E487D1E003D447D /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				527E675B2E487D1E003D447D /* PathParamResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		527E675D2E487D1E003D447D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				527E67582E487D1E003D447D /* Enums */,
+				527E675A2E487D1E003D447D /* Request */,
+				527E675C2E487D1E003D447D /* Response */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		527E67602E487D1E003D447D /* ObjCBridge */ = {
+			isa = PBXGroup;
+			children = (
+				527E675E2E487D1E003D447D /* UniversalLinkHandlerBridge.h */,
+				527E675F2E487D1E003D447D /* UniversalLinkHandlerBridge.m */,
+			);
+			path = ObjCBridge;
+			sourceTree = "<group>";
+		};
+		527E67622E487D1E003D447D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				527E67612E487D1E003D447D /* LimelinkService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
@@ -200,25 +241,15 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		A4E2AC8E2DF30EA1008AFCAC /* deeplink */ = {
-			isa = PBXGroup;
-			children = (
-				A4E2AC8F2DF30ED7008AFCAC /* LimeLinkSDK.swift */,
-			);
-			path = deeplink;
-			sourceTree = "<group>";
-		};
 		A5B0350F0B51DAC6609F016578B494D6 /* LimelinkIOSSDK */ = {
 			isa = PBXGroup;
 			children = (
-				A4E2AC8E2DF30EA1008AFCAC /* deeplink */,
-				24F2F16F2C29176400912691 /* response */,
-				24F2F16C2C29174200912691 /* request */,
-				24F2F1692C2916B600912691 /* enum */,
+				527E67562E487D1E003D447D /* Handlers */,
+				527E675D2E487D1E003D447D /* Models */,
+				527E67602E487D1E003D447D /* ObjCBridge */,
+				527E67622E487D1E003D447D /* Services */,
 				AC4EE15674AC468D085360C1D5F2115D /* Pod */,
 				05E62BD66F90C7553C01211C51EFCCDC /* Support Files */,
-				24F2F1792C2917EE00912691 /* LinkStats.swift */,
-				24F2F17B2C29181700912691 /* UrlHandler.swift */,
 			);
 			name = LimelinkIOSSDK;
 			path = ../..;
@@ -276,6 +307,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				527E67632E487D1E003D447D /* UniversalLinkHandlerBridge.h in Headers */,
 				EABAEBB379AB525823C3A96642E42DD1 /* LimelinkIOSSDK-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,11 +447,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				14A8AE0C4B79C68CB681F66D0CCCB6C2 /* LimelinkIOSSDK-dummy.m in Sources */,
-				24F2F16B2C29170600912691 /* EventType.swift in Sources */,
-				24F2F17C2C29181700912691 /* UrlHandler.swift in Sources */,
-				24F2F16E2C29175100912691 /* LimeLinkRequest.swift in Sources */,
-				24F2F1712C29176E00912691 /* PathParamResponse.swift in Sources */,
-				24F2F17A2C2917EE00912691 /* LinkStats.swift in Sources */,
+				527E67642E487D1E003D447D /* UniversalLink.swift in Sources */,
+				527E67652E487D1E003D447D /* LimelinkService.swift in Sources */,
+				527E67662E487D1E003D447D /* UrlHandler.swift in Sources */,
+				527E67672E487D1E003D447D /* EventType.swift in Sources */,
+				527E67682E487D1E003D447D /* PathParamResponse.swift in Sources */,
+				527E67692E487D1E003D447D /* UniversalLinkHandlerBridge.m in Sources */,
+				527E676A2E487D1E003D447D /* LimeLinkRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,7 +495,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D9CE87BDA95AA740E6107C4B0267C509 /* Pods-LimelinkIOSSDK_Tests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
@@ -561,7 +594,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5AB3B4832EEA0F338E0684FCB359DBF4 /* Pods-LimelinkIOSSDK_Example.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
@@ -633,7 +665,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 21C0900E16657641C26B948A9A7E124C /* Pods-LimelinkIOSSDK_Tests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
@@ -774,7 +805,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0135522BB329032C1CC9E33ED8936B76 /* Pods-LimelinkIOSSDK_Example.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
