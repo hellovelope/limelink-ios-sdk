@@ -9,12 +9,14 @@ struct UniversalLinkResponse: Codable {
     let request_uri: String
 }
 
-public class UniversalLink {
-    public static let shared = UniversalLink()
+@objc public class UniversalLink: NSObject {
+    @objc public static let shared = UniversalLink()
 
-    private init() {}
+    private override init() {
+        super.init()
+    }
 
-    public func handleUniversalLink(_ url: URL) {
+    @objc public func handleUniversalLink(_ url: URL) {
         guard let host = url.host else { return }
         
         // {suffix}.limelink.org 패턴 확인
@@ -32,6 +34,11 @@ public class UniversalLink {
             fetchDeeplink(subdomain: subdomain, path: path, platform: platform)
         }
     }
+    
+    @objc public class func handleUniversalLink(_ url: URL) {
+            shared.handleUniversalLink(url)
+        }
+    
     
     // MARK: - 서브도메인 Universal Link 처리
     private func handleSubdomainUniversalLink(_ url: URL) {

@@ -2,8 +2,6 @@
 //  UrlHandler.swift
 //  LimelinkIOSSDK
 //
-//  Created by artue on 6/24/24.
-//
 
 import Foundation
 
@@ -36,12 +34,10 @@ public func parseQueryParams(from url: URL?) -> [String: String] {
 }
 
 public func parsePathParams(from url: URL?) -> PathParamResponse {
-    guard let urlString = UrlHandler.getScheme(from: url), let url = URL(string: urlString) else {
-        return PathParamResponse(mainPath: "", subPath: "")
-    }
-
+    guard let url = url else {
+           return PathParamResponse(mainPath: "", subPath: "")
+       }
     let pathSegments = url.pathComponents.filter { $0 != "/" }
-    
     let mainPath = pathSegments.indices.contains(0) ? pathSegments[0] : ""
     let subPath = pathSegments.indices.contains(2) ? pathSegments[2] : nil
     
