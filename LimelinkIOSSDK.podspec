@@ -36,6 +36,14 @@ TODO: We use limelink service for analytics and page navigation. We currently pr
   # Swift 헤더 생성을 위한 설정
   s.pod_target_xcconfig = {
     'SWIFT_OBJC_INTERFACE_HEADER_NAME' => 'LimelinkIOSSDK-Swift.h',
+    'DEFINES_MODULE' => 'YES',
+    'SWIFT_INSTALL_OBJC_HEADER' => 'YES',
+    'CLANG_ENABLE_MODULES' => 'YES'
+  }
+  
+  # Objective-C와 Swift 간의 호환성을 위한 설정
+  s.user_target_xcconfig = {
+    'SWIFT_OBJC_INTERFACE_HEADER_NAME' => 'LimelinkIOSSDK-Swift.h',
     'DEFINES_MODULE' => 'YES'
   }
   
