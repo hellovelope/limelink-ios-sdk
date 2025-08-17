@@ -7,18 +7,12 @@
 
 #import <Foundation/Foundation.h>
 #import "UniversalLinkHandlerBridge.h"
+#import "LimelinkIOSSDK-Swift.h"
 
 @implementation UniversalLinkHandlerBridge
 
 + (void)handleUniversalLink:(NSURL *)url {
-    // Swift 클래스에 접근하기 위해 NSClassFromString 사용
-    Class universalLinkClass = NSClassFromString(@"LimelinkIOSSDK.UniversalLink");
-    if (universalLinkClass) {
-        id sharedInstance = [universalLinkClass performSelector:@selector(shared)];
-        if (sharedInstance) {
-            [sharedInstance performSelector:@selector(handleUniversalLink:) withObject:url];
-        }
-    }
+    [UniversalLink handleUniversalLink:url];
 }
 
 @end

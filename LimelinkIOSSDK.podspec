@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LimelinkIOSSDK'
-  s.version          = '0.1.34'
+  s.version          = '0.1.35'
   s.summary          = 'We use limelink service for analytics and page navigation..'
 
 # This description is used to generate tags and improve search results.
@@ -32,6 +32,12 @@ TODO: We use limelink service for analytics and page navigation. We currently pr
 
   s.source_files = 'LimelinkIOSSDK/**/*'
   s.swift_version = '5.0'
+  
+  # Swift 헤더 생성을 위한 설정
+  s.pod_target_xcconfig = {
+    'SWIFT_OBJC_INTERFACE_HEADER_NAME' => 'LimelinkIOSSDK-Swift.h',
+    'DEFINES_MODULE' => 'YES'
+  }
   
   # s.resource_bundles = {
   #   'LimelinkIOSSDK' => ['LimelinkIOSSDK/Assets/*.png']
