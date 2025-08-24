@@ -1,3 +1,4 @@
+
 # LimelinkIOSSDK
 <img src="https://limelink.org/assets/default_lime-C14nNSvc.svg" alt="이미지 설명" style="display: block; margin-left: auto; margin-right: auto; width: 30%;">
 
@@ -102,6 +103,8 @@ class ViewController: UIViewController {
 
    **Objective-C:**
    ```objc
+   #import <LimelinkIOSSDK/UniversalLinkHandlerBridge.h>
+   
    // Universal Link handling
    - (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray<id<UIUserActivityRestoring>> * _Nullable))restorationHandler {
        if ([userActivity.activityType isEqualToString:NSUserActivityTypeBrowsingWeb]) {
@@ -130,114 +133,46 @@ When accessing `https://{suffix}.limelink.org/link/{link_suffix}`:
 
 1. SDK retrieves header information from the subdomain
 2. Makes a request to `https://www.limelink.org/api/v1/dynamic_link/{link_suffix}` API with header information
-3. Returns the `uri` value via completion handler for the app to handle
+3. Returns the `uri` value via completion handler, which contains the link to be handled by the app
 
 #### 2. Direct Access Method
 When directly accessing `https://www.limelink.org/api/v1/dynamic_link/{suffix}`:
 
 1. SDK makes a direct API request
-2. Returns the `uri` value via completion handler for the app to handle
+2. Returns the `uri` value via completion handler, which contains the link to be handled by the app
 
 ### Examples
 
 **Swift:**
 ```swift
 // Method 1: Subdomain Access
-// When accessing https://abc123.limelink.org
+// When accessing https://abc123.limelink.org/link/test
 // 1. Collect header information from subdomain
-// 2. Call https://limelink.org/universal-link/app/dynamic_link/abc123 API
-// 3. API response: {"request_uri": "https://example.com/some-page"}
-// 4. Redirect to appropriate screen
+// 2. Call https://www.limelink.org/api/v1/dynamic_link/test API
+// 3. API response: {"uri": "abc123://test?test.com"}
+// 4. Return the link via completion handler
 
 // Method 2: Direct Access
-// When accessing https://limelink.org/universal-link/app/dynamic_link/abc123
+// When accessing https://www.limelink.org/api/v1/dynamic_link/test
 // 1. Make direct API call
-// 2. API response: {"request_uri": "product/detail/123"}
-// 3. Handle with limelink://product/detail/123 scheme
+// 2. API response: {"uri": "abc123://test?test.com"}
+// 3. Return the link via completion handler
 ```
 
 **Objective-C:**
 ```objc
 // Method 1: Subdomain Access
-// When accessing https://abc123.limelink.org
+// When accessing https://abc123.limelink.org/link/test
 // 1. Collect header information from subdomain
-// 2. Call https://limelink.org/universal-link/app/dynamic_link/abc123 API
-// 3. API response: {"request_uri": "https://example.com/some-page"}
-// 4. Redirect to appropriate screen
+// 2. Call https://www.limelink.org/api/v1/dynamic_link/test API
+// 3. API response: {"uri": "abc123://test?test.com"}
+// 4. Return the link via completion handler
 
 // Method 2: Direct Access
-// When accessing https://limelink.org/universal-link/app/dynamic_link/abc123
+// When accessing https://www.limelink.org/api/v1/dynamic_link/test
 // 1. Make direct API call
-// 2. API response: {"request_uri": "product/detail/123"}
-// 3. Handle with limelink://product/detail/123 scheme
+// 2. API response: {"uri": "abc123://test?test.com"}
+// 3. Return the link via completion handler
 ```
 
-## SDK Usage Examples
 
-### Swift
-```swift
-import UIKit
-import LimelinkIOSSDK
-
-class ViewController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Save statistical information
-        let url = URL(string: "your_url")!
-        saveLimeLinkStatus(url: url, privateKey: "your_private_key")
-        
-        // Handle intent
-        handleIntent()
-    }
-    
-    private func handleIntent() {
-        if let url = URL(string: "your_url") {
-            let pathParamResponse = parsePathParams(from: url)
-            let suffix = pathParamResponse.mainPath
-            let handle = pathParamResponse.subPath
-            
-            if handle == "example" {
-                // Navigate to the desired screen
-            }
-        }
-    }
-}
-```
-
-### Objective-C
-```objc
-#import <UIKit/UIKit.h>
-#import <LimelinkIOSSDK/LimelinkIOSSDK.h>
-
-@interface ViewController : UIViewController
-@end
-
-@implementation ViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    // Save statistical information
-    NSURL *url = [NSURL URLWithString:@"your_url"];
-    [self saveLimeLinkStatusWithUrl:url privateKey:@"your_private_key"];
-    
-    // Handle intent
-    [self handleIntent];
-}
-
-- (void)handleIntent {
-    NSURL *url = [NSURL URLWithString:@"your_url"];
-    if (url) {
-        PathParamResponse *pathParamResponse = [self parsePathParamsFromUrl:url];
-        NSString *suffix = pathParamResponse.mainPath;
-        NSString *handle = pathParamResponse.subPath;
-        
-        if ([handle isEqualToString:@"example"]) {
-            // Navigate to the desired screen
-        }
-    }
-}
-
-@end
-```
