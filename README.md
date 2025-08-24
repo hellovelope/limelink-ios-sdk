@@ -82,7 +82,15 @@ class ViewController: UIViewController {
    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
        if userActivity.activityType == NSUserActivityTypeBrowsingWeb {
            if let url = userActivity.webpageURL {
-               UniversalLink.shared.handleUniversalLink(url)
+               UniversalLink.shared.handleUniversalLink(url) { uri in
+                   if let uri = uri {
+                       print("Universal Link URI: \(uri)")
+                       // Handle the received URI here or pass it
+                       // Note: You must use completion handler in both Swift and Objective-C
+                   } else {
+                       print("Failed to receive Universal Link URI")
+                   }
+               }
                return true
            }
        }

@@ -16,29 +16,32 @@ struct UniversalLinkResponse: Codable {
         super.init()
     }
 
-    @objc public func handleUniversalLink(_ url: URL) {
-        guard let host = url.host else { return }
+    @objc public func handleUniversalLink(_ url: URL, completion: @escaping (String?) -> Void) {
+        guard let host = url.host else { 
+            completion(nil)
+            return 
+        }
         
         // {suffix}.limelink.org/link/{link_suffix} 패턴 처리
         if host.hasSuffix(".limelink.org") {
-            handleSubdomainPattern(url)
+            handleSubdomainPattern(url, completion: completion)
         } else {
             // 기존 deeplink 처리 로직
             let path = url.path  // 예: /abc123
             let subdomain = host.components(separatedBy: ".").first ?? ""
             let platform = "ios"
             
-            fetchDeeplink(subdomain: subdomain, path: path, platform: platform)
+            fetchDeeplink(subdomain: subdomain, path: path, platform: platform, completion: completion)
         }
     }
     
-    @objc public class func handleUniversalLink(_ url: URL) {
-            shared.handleUniversalLink(url)
-        }
+    @objc public class func handleUniversalLink(_ url: URL, completion: @escaping (String?) -> Void) {
+        shared.handleUniversalLink(url, completion: completion)
+    }
     
     
     // MARK: - 서브도메인 패턴 처리 ({suffix}.limelink.org/link/{link_suffix})
-    private func handleSubdomainPattern(_ url: URL) {
+    private func handleSubdomainPattern(_ url: URL, completion: @escaping (String?) -> Void) {
         guard let host = url.host else { return }
         
         // {suffix}.limelink.org에서 suffix 추출
@@ -52,6 +55,7 @@ struct UniversalLinkResponse: Codable {
               let match = regex.firstMatch(in: path, range: NSRange(path.startIndex..., in: path)),
               let linkSuffixRange = Range(match.range(at: 1), in: path) else {
             print("❌ 서브도메인 패턴이 일치하지 않습니다: \(path)")
+            completion(nil)
             return
         }
         
@@ -62,26 +66,35 @@ struct UniversalLinkResponse: Codable {
             guard let self = self else { return }
             
             // 헤더 정보를 사용하여 Universal Link API 호출
-            self.fetchUniversalLinkWithHeaders(suffix: suffix, linkSuffix: linkSuffix, headers: headers)
+            self.fetchUniversalLinkWithHeaders(suffix: suffix, linkSuffix: linkSuffix, headers: headers) { uri in
+                completion(uri)
+            }
         }
     }
 
-    private func fetchDeeplink(subdomain: String, path: String, platform: String) {
+    private func fetchDeeplink(subdomain: String, path: String, platform: String, completion: @escaping (String?) -> Void) {
         let encodedPath = path.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         let urlString = "https://deep.limelink.org/link/subdomain=\(subdomain)&path=\(encodedPath)&platform=\(platform)"
 
-        guard let url = URL(string: urlString) else { return }
+        guard let url = URL(string: urlString) else { 
+            completion(nil)
+            return 
+        }
 
         URLSession.shared.dataTask(with: url) { data, _, error in
-            guard error == nil, let data = data else { return }
+            guard error == nil, let data = data else { 
+                completion(nil)
+                return 
+            }
 
             do {
                 let result = try JSONDecoder().decode(DeeplinkResponse.self, from: data)
                 DispatchQueue.main.async {
-                    self.navigateToDeeplink(result.deeplinkUrl)
+                    completion(result.deeplinkUrl)
                 }
             } catch {
                 print("❌ Deeplink decoding error:", error)
+                completion(nil)
             }
         }.resume()
     }
@@ -129,11 +142,12 @@ struct UniversalLinkResponse: Codable {
     }
     
     // MARK: - 헤더 정보를 포함한 Universal Link API 호출
-    private func fetchUniversalLinkWithHeaders(suffix: String, linkSuffix: String, headers: [String: String]) {
+    private func fetchUniversalLinkWithHeaders(suffix: String, linkSuffix: String, headers: [String: String], completion: @escaping (String?) -> Void) {
         let urlString = "https://www.limelink.org/api/v1/dynamic_link/\(linkSuffix)"
         
         guard let url = URL(string: urlString) else {
             print("❌ Universal Link URL 생성 실패: \(urlString)")
+            completion(nil)
             return
         }
         
@@ -152,44 +166,28 @@ struct UniversalLinkResponse: Codable {
         URLSession.shared.dataTask(with: request) { data, response, error in
             if let error = error {
                 print("❌ Universal Link API 호출 실패: \(error)")
+                completion(nil)
                 return
             }
             
             guard let data = data else {
                 print("❌ Universal Link API 응답 데이터가 없습니다")
+                completion(nil)
                 return
             }
             
             do {
                 let result = try JSONDecoder().decode(UniversalLinkResponse.self, from: data)
                 DispatchQueue.main.async {
-                    self.navigateToUniversalLink(result.uri)
+                    completion(result.uri)
                 }
             } catch {
                 print("❌ Universal Link 응답 디코딩 실패: \(error)")
                 if let responseString = String(data: data, encoding: .utf8) {
                     print("📄 응답 내용: \(responseString)")
                 }
+                completion(nil)
             }
         }.resume()
-    }
-    
-    // MARK: - Universal Link 내부 라우팅 (단순화됨)
-    private func navigateToUniversalLink(_ uri: String) {
-        print("🔗 Universal Link 리다이렉트: \(uri)")
-        
-        // 받은 uri를 바로 열기 (scheme://request_uri 형태)
-        guard let url = URL(string: uri) else {
-            print("❌ 유효하지 않은 uri: \(uri)")
-            return
-        }
-        
-        UIApplication.shared.open(url, options: [:]) { success in
-            if success {
-                print("✅ Universal Link 리다이렉트 성공: \(uri)")
-            } else {
-                print("❌ Universal Link 리다이렉트 실패: \(uri)")
-            }
-        }
     }
 }
